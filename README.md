@@ -29,9 +29,7 @@ More info on ensuring your Docker installation is compatible with VS Code dev co
 
 ## Hosting the app
 
-Will eventually be set up to push images to docker hub for cloud hosting.
-
-Using the `Build` task in VS Code will build the app for production.
+Using the `Build` task in VS Code will build the app for production, however this prototype repo is not set up for deployment to production.
 
 ## Setting up for development
 
