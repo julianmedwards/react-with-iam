@@ -1,23 +1,7 @@
 # React App with Identity Access & Management
 
-Mock react app to try out various IAM libraries/providers with.
+Mock React app to get the general tech stack working with an auth provider for my [Inventive Academy Final Project](https://github.com/julianmedwards/final-project-games-not-played).
 
-## Tech Stack
+The final prototype can be found at [this branch](https://github.com/julianmedwards/react-with-iam/tree/passport-jwt) using JWTs.
 
--   React.js with Vite & Typescript
--   REST API with Express & Sequelize using Typescript
-
-## Potential Methods/Providers:
-
--   JSON Web Tokens, custom?
--   [Passport.js](https://www.passportjs.org/)
--   [Keycloak](https://www.keycloak.org/)
--   [SuperTokens](https://supertokens.com/)
--   [Auth0](https://auth0.com/)
--   [FusionAuth](https://fusionauth.io/)
--   [FirebaseAuth](https://firebase.google.com/docs/auth)
--   [Clerk](https://clerk.com/)
-
-## Done:
-
-None.
+You can also see this abandoned [session-based version](https://github.com/julianmedwards/react-with-iam/tree/passport-session).
