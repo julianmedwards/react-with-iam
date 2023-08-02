@@ -1,0 +1,55 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/docker-outside-of-docker
+{
+    "name": "Docker outside of Docker",
+    // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+    "dockerComposeFile": "docker-compose.yaml",
+    "service": "devcontainer",
+    "workspaceFolder": "$/workspaces/${localWorkspaceFolderBasename}",
+
+    "features": {
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+            "version": "latest",
+            "enableNonRootDocker": "true",
+            "moby": "true"
+        },
+        "ghcr.io/devcontainers/features/node:1": {},
+        "ghcr.io/devcontainers-contrib/features/typescript:2": {}
+    },
+
+    // Use this environment variable if you need to bind mount your local source code into a new container.
+    "remoteEnv": {
+        "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+    },
+
+    "portsAttributes": {
+        "5000": {
+            "label": "api",
+            "onAutoForward": "silent"
+        },
+        "5173": {
+            "label": "client",
+            "onAutoForward": "notify"
+        }
+    },
+
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    "forwardPorts": [],
+
+    // Use 'postCreateCommand' to run commands after the container is created.
+    // 1. Install pnpm dependencies, 2. Ensure permission to run bash scripts
+    "postCreateCommand": "pnpm install",
+    "customizations": {
+        "vscode": {
+            "extensions": ["esbenp.prettier-vscode"]
+        }
+    }
+
+    // Configure tool-specific properties.
+    // "customizations": {},
+
+    // "containerUser": "root",
+
+    // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+    // "remoteUser": "root"
+}

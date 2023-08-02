@@ -1,0 +1,41 @@
+{
+    "name": "react-with-iam",
+    "private": true,
+    "version": "1.0.0",
+    "type": "commonjs",
+    "author": "Julian Edwards",
+    "license": "ISC",
+    "scripts": {
+        "create-db": "sequelize db:create",
+        "migrate-db": "sequelize db:migrate",
+        "start-client:dev": "vite dev",
+        "start-api:dev": "nodemon packages/server/server.ts",
+        "test": "vitest run --coverage",
+        "compile-typescript": "tsc -b",
+        "build-client": "vite build --emptyOutDir",
+        "build": "pnpm run compile-typescript && pnpm run build-client"
+    },
+    "dependencies": {
+        "client": "workspace:*",
+        "server": "workspace:*"
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "^5.16.5",
+        "@testing-library/react": "^14.0.0",
+        "@testing-library/user-event": "^14.4.3",
+        "@vitejs/plugin-react": "^4.0.0",
+        "@vitest/coverage-v8": "^0.32.4",
+        "autoprefixer": "^10.4.14",
+        "jsdom": "^22.1.0",
+        "msw": "^1.2.2",
+        "nodemon": "^2.0.22",
+        "postcss": "^8.4.25",
+        "postcss-nesting": "^12.0.0",
+        "postcss-sorting": "^8.0.2",
+        "sequelize-cli": "^6.6.0",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.0.4",
+        "vite": "^4.3.5",
+        "vitest": "^0.32.4"
+    }
+}

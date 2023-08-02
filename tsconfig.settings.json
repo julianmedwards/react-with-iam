@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        /* Visit https://aka.ms/tsconfig to read more about this file */
+
+        /* Projects */
+        "composite": true /* Enable constraints that allow a TypeScript project to be used with project references. */,
+
+        /* Emit */
+        "declaration": true,
+        // "declarationMap": true /* Create sourcemaps for d.ts files. */,
+        // "sourceMap": true /* Create source map files for emitted JavaScript files. */
+        // "sourceRoot": "" /* Specify the root path for debuggers to find the reference source code. */,
+        // "mapRoot": "" /* Specify the location where debugger should locate map files instead of generated locations. */,
+        // "inlineSources": true /* Include source code in the sourcemaps inside the emitted JavaScript. */,
+
+        /* Linting */
+        "strict": true,
+
+        /* Completeness */
+        "skipLibCheck": true /* Skip type checking all .d.ts files. */
+    }
+}

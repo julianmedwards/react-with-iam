@@ -1,0 +1,26 @@
+body {
+    height: 100vh;
+}
+
+#root {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+.link {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.link:hover {
+    color: #0a58ca;
+}

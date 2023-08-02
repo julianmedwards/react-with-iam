@@ -1,0 +1,5 @@
+{
+    "name": "@react-with-iam/types",
+    "main": "index.ts",
+    "private": true
+}

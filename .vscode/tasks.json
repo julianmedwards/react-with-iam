@@ -1,0 +1,69 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Create Database",
+            "type": "shell",
+            "command": "pnpm run create-db",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Migrate Database",
+            "type": "shell",
+            "command": "pnpm run migrate-db",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "First Time DB Setup",
+            "dependsOrder": "sequence",
+            "dependsOn": ["Create Database", "Migrate Database"]
+        },
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "pnpm run build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Start API",
+            "type": "shell",
+            "command": "pnpm run start-api:dev",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Start Client Dev",
+            "type": "shell",
+            "command": "pnpm run start-client:dev",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Dev",
+            "dependsOrder": "parallel",
+            "dependsOn": ["Start API", "Start Client Dev"]
+        },
+        {
+            "label": "Test",
+            "type": "shell",
+            "command": "pnpm run test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            }
+        }
+    ]
+}

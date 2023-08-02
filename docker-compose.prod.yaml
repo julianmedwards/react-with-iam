@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+    app:
+        depends_on:
+            - db
+        build:
+            context: ./packages
+            dockerfile: Dockerfile
+            args:
+                - NODE_VERSION=${NODE_VERSION}
+                - DATABASE_HOST=${MYSQL_HOST}
+                - DATABASE_PASSWORD=${MYSQL_ROOT_PASSWORD}
+                - NODE_ENV=production
+                - PORT=3000
+        deploy:
+            restart_policy:
+                condition: on-failure
+        working_dir: /usr/src/app
+        image: julianmedwards/react-iam-passport:prod
+        ports:
+            - 80:3000
+        networks:
+            - localnetwork
+    db:
+        build: 
+            args: 
+                - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+        image: mysql:${MYSQL_VERSION}
+        ports:
+            - 3376:3306
+        volumes:
+            - ${LOCAL_DB_PATH}:/var/lib/mysql
+        networks:
+            - localnetwork
+
+networks:
+    localnetwork:
