@@ -28,14 +28,13 @@
             "onAutoForward": "silent"
         },
         "5173": {
-            // Same as 3000, don't forward
             "label": "client",
             "onAutoForward": "notify"
         }
     },
 
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
-    "forwardPorts": [3000],
+    "forwardPorts": [],
 
     // Use 'postCreateCommand' to run commands after the container is created.
     // 1. Install pnpm dependencies, 2. Ensure permission to run bash scripts

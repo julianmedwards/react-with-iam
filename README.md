@@ -2,7 +2,9 @@
 
 Mock react app to get a working tech stack set up with auth using Passport.
 
-This branch is my second attempt using Passport, this time using JWT tokens.
+This app uses username and password authentication with Json Web Tokens on the client.
+
+I originally used sessions with an http-only cookie but abandoned it after having too many problems in the testing. You can see that earlier branch [here](https://github.com/julianmedwards/react-with-iam/tree/passport-session).
 
 ## Tech Stack
 
@@ -29,7 +31,13 @@ More info on ensuring your Docker installation is compatible with VS Code dev co
 
 ## Hosting the app
 
+<<<<<<< Updated upstream
 Using the `Build` task in VS Code will build the app for production, however this prototype repo is not set up for deployment to production.
+=======
+This prototype isn't set up to be hosted in production.
+
+Using the `Build` task in VS Code can be used to build the app regardless.
+>>>>>>> Stashed changes
 
 ## Setting up for development
 
@@ -74,3 +82,5 @@ The `Migrate Database` task will apply any existing and new migrations.
 Make sure the API server is running with the `Start Server` or `Dev` tasks.
 
 Use the `Test` task to run automated testing.
+
+Certain tests require the database to be seeded with certain user data, which currently must be done manually. Look at the test files to see what they need.
