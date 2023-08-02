@@ -1,19 +1,21 @@
 # React App with Identity Access & Management
 
-Mock react app to get a working tech stack set up with auth using Passport.
+Mock React app to get a working tech stack set up with auth using Passport.
+
+Prototype for my Inventive Academy [Final Project](https://github.com/julianmedwards/final-project-games-not-played).
 
 This app uses username and password authentication with Json Web Tokens on the client.
 
 I originally used sessions with an http-only cookie but abandoned it after having too many problems in the testing. You can see that earlier branch [here](https://github.com/julianmedwards/react-with-iam/tree/passport-session).
 
-The final prototype can be found at [this branch](https://github.com/julianmedwards/react-with-iam/tree/passport-jwt) using JWTs.
+## Tech Stack
 
 -   [PNPM](https://pnpm.io/) Monorepo
 -   [Docker](https://www.docker.com/) and [VS Code Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers)
 -   [VS Code Tasks](https://code.visualstudio.com/Docs/editor/tasks)
 -   [Typescript](https://www.typescriptlang.org/)
 -   [ReactJS](https://react.dev/) & [React Router](https://reactrouter.com/) with [Vite](https://vitejs.dev/)
--   [Express](https://expressjs.com/) API & Distribution Server
+-   [Express](https://expressjs.com/) REST API
 -   MySQL Database with [Sequelize](https://sequelize.org/) using [sequelize-typescript](https://github.com/sequelize/sequelize-typescript)
 -   [Passport.js](https://www.passportjs.org/) for email & password authentication with JWT
 -   [Vitest](https://vitest.dev/) with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
@@ -31,14 +33,9 @@ More info on ensuring your Docker installation is compatible with VS Code dev co
 
 ## Hosting the app
 
-<<<<<<< Updated upstream
-Using the `Build` task in VS Code will build the app for production, however this prototype repo is not set up for deployment to production.
-=======
 This prototype isn't set up to be hosted in production.
 
 Using the `Build` task in VS Code can be used to build the app regardless.
-
-> > > > > > > Stashed changes
 
 ## Setting up for development
 
